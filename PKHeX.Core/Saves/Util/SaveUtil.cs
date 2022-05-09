@@ -513,10 +513,6 @@ namespace PKHeX.Core
             if (data.Length is not (SIZE_G8BDSP or SIZE_G8BDSP_1 or SIZE_G8BDSP_2 or SIZE_G8BDSP_3))
                 return Invalid;
 
-            var ver = (Gem8Version)ReadUInt32LittleEndian(data);
-            if (ver is not (Gem8Version.V1_0 or Gem8Version.V1_1 or Gem8Version.V1_2 or Gem8Version.V1_3))
-                return Invalid;
-
             return BDSP;
         }
 
